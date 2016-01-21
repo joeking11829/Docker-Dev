@@ -6,10 +6,10 @@ INSTALL DOCKER AND NVIDIA-DOCKER
 
 ### Installlation
 
- ###Install Docker
+#####Install Docker  <br>
 For Ubuntu please reference this link: [Docker-Installation](https://docs.docker.com/engine/installation/ubuntulinux/)
 
- ###Install Nvidia-Docker
+#####Install Nvidia-Docker  <br>
 For Ubuntu please reference this link: [Nvidia-Docker-Installation](https://github.com/NVIDIA/nvidia-docker)
 
 
@@ -38,7 +38,7 @@ nvidia-docker images
 
 nvidia-docker run -ti --rm --name=your_dev_name -p 8024:22 --privileged --device /dev/bus/usb:/dev/bus/usb image-id:tag Opentional_COMMAND
 
-Optional:  <br>
+#####Optional:  <br>
 with -v hostPath:containerPath that can mount Host file or directory to Container
 
 ### 4.Exxcure a COMMAND on a running Container
@@ -63,7 +63,7 @@ nvidia-docker cp container-id:containerpath hostpath  <br>
 
 nvidia-docker rm container-id
 
-Optional:  <br>
+#####Optional:  <br>
 Remove All not running container  <br>
 nvidia-docker rm $(nvidia-docker ps -aq)  <br>
 
@@ -71,7 +71,7 @@ nvidia-docker rm $(nvidia-docker ps -aq)  <br>
 
 nvidia-docker rmi image-id
 
-Optional:  <br>
+#####Optional:  <br>
 Remove All untagged images:  <br>
 nvidia-docker rmi $(docker images | grep "^<none>" | awk "{print $3}")  <br>
 
