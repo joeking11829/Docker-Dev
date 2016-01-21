@@ -1,6 +1,18 @@
 # Docker-Dev
 =============================
 
+INSTALL DOCKER AND NVIDIA-DOCKER
+---------------------------------
+
+### Installlation
+
+ ###Install Docker
+For Ubuntu please reference this link: [Docker-Installation](https://docs.docker.com/engine/installation/ubuntulinux/)
+
+ ###Install Nvidia-Docker
+For Ubuntu please reference this link: [Nvidia-Docker-Installation](https://github.com/NVIDIA/nvidia-docker)
+
+
 NVIDIA DOCKER CONTAINER ISSUE
 -------------------------------
 
