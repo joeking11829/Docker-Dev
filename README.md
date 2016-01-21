@@ -41,7 +41,7 @@ nvidia-docker run -ti --rm --name=your_dev_name -p 8024:22 --privileged --device
 #####Optional:  <br>
 with -v hostPath:containerPath that can mount Host file or directory to Container
 
-### 4.Exxcure a COMMAND on a running Container
+### 4.Execute a COMMAND on a running Container
 
 nvidia-docker exec -ti -user=username container-id COMMAND
 
