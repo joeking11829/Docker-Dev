@@ -22,7 +22,45 @@ The temp Container for building time does not have "/usr/local/nvidia/" and "/de
 So build library with CUDA inside Dockerfile maybe failed Because "No Such File or Directory"  <br>
 
 
-HOWTO USE DOCKER CONTAINER
+DOCKER CONTAINER QUICK START
+---------------------------------
+
+### 1. Install Docker and Nvidia-Docker
+
+......
+
+### 2. Build X2GO Base-Image which provide GUI by X2GO
+
+cd ../Docker-Dev/X2GO/
+nvidia-docker build --force-rm -t joe/cuda-x2go:stable .
+
+### 3. Build Image for OpenCV3.0.0 dev environment with PrimeSense module
+
+cd ../Docker-Dev/OPENCV/
+nvidia-docker build --force-rm -t joe/cuda-x2go-opencv:stable .
+
+### 4. Run OpenCV3.0 dev Container
+
+nvidia-docker run -ti --rm --name=opencv_dev --privileged --device /dev/bus/usb:/dev/bus/usb joe/cuda-x2go-opencv:stable
+
+###Optional:
+with -ti : give a tty interactive
+with --rm : delete container immediately after user exit
+with --p hostPort:containerPort : map the host port to container
+with --privileged : give extended privileged to this container
+with --device hostDeviceNode:containerDeviceNode : map the host device node to container
+
+
+### 5. Use X2GO Client to access the Container
+
+......
+
+### 6. Start to Developer
+
+......
+
+
+HOWTO USE DOCKER CONTAINER CLI
 ---------------------------------
 
 ### 1.Build Docker Images:

@@ -4,7 +4,7 @@ MAINTAINER JOE YOUNG <joeking11829@gmail.com>
 
 # Install OpenCV dependency lib
 RUN sudo apt-get update
-RUN sudo apt-get install -y python-dev python-pip build-essential cmake pkg-config libatlas-base-dev gfortran \
+RUN sudo apt-get install -y python-dev python-pip python-numpy build-essential cmake pkg-config libatlas-base-dev gfortran \
                             libjasper-dev libgtk2.0-dev libavcodec-dev libavformat-dev \
                             libswscale-dev libjpeg-dev libpng-dev libtiff-dev libv4l-dev v4l-utils
 
