@@ -100,8 +100,20 @@ with --user=user_name : set login user_name
 
 nvidia-docker ps -a
 
+
 #####Container Status:  <br>
 
+For Container in Exited and Paused status  <br>
+You can use:  <br>
+nvidia-docker start container-id(container-name)  <br>
+to start container  <br>
+
+For Container in Running status  <br>
+You can use:  <br>
+nvidia-docker stop container-id(container-name)  <br>
+to stop container  <br>
+
+Explanation from Docker website:  <br>
 ![X2GO MATE](./document/photo/Docker-Status-Running.png)
 ![X2GO MATE](./document/photo/Docker-Status-Exited.png)
 
