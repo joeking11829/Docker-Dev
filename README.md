@@ -41,7 +41,7 @@ nvidia-docker build --force-rm -t joe/cuda-x2go-opencv:stable .
 
 ### 4. Run OpenCV3.0 dev Container
 
-nvidia-docker run -ti --rm --name=opencv_dev --privileged --device /dev/bus/usb:/dev/bus/usb joe/cuda-x2go-opencv:stable
+nvidia-docker run -ti --rm --name=opencv_dev --privileged --device=/dev/bus/usb:/dev/bus/usb joe/cuda-x2go-opencv:stable
 
 #####Optional:
 with -ti : give a tty interactive  <br>
@@ -49,7 +49,7 @@ with --rm : delete container immediately after user exit  <br>
 with --name=container_name : assign container name
 with --p hostPort:containerPort : map the host port to container  <br>
 with --privileged : give extended privileged to this container  <br>
-with --device hostDeviceNode:containerDeviceNode : map the host device node to container  <br>
+with --device=hostDeviceNode:containerDeviceNode : map the host device node to container  <br>
 
 
 ### 5. Use X2GO Client to access the Container
