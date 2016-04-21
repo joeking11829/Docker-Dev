@@ -47,7 +47,7 @@ nvidia-docker run -ti --rm --name=opencv_dev --privileged --device=/dev/bus/usb:
 with -ti : give a tty interactive  <br>
 with --rm : delete container immediately after user exit  <br>
 with --name=container_name : assign container name
-with --p hostPort:containerPort : map the host port to container  <br>
+with -p= hostPort:containerPort : map the host port to container  <br>
 with --privileged : give extended privileged to this container  <br>
 with --device=hostDeviceNode:containerDeviceNode : map the host device node to container  <br>
 
