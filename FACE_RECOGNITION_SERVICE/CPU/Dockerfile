@@ -27,7 +27,8 @@ RUN sudo apt-get install -y python-dev python-pip python-numpy build-essential c
                             libswscale-dev libjpeg-dev libpng-dev libtiff-dev libv4l-dev v4l-utils
 
 # Install Celery dependency lib
-RUN sudo pip install Celery flower tornado tornado-celery
+RUN sudo pip install Celery==3.1.24
+RUN sudo pip install flower tornado tornado-celery
 RUN sudo pip install tornado --upgrade
 RUN sudo pip install pika==0.9.14 --force-reinstall
 RUN sudo apt-get install -y rabbitmq-server nodejs-legacy npm
