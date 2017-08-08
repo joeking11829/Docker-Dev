@@ -21,6 +21,9 @@ RUN sudo apt-get update && sudo apt-get upgrade -y
 RUN sudo apt-get install -y mate-desktop-environment-core && sudo apt-get install -y x2gomatebindings
 RUN sudo apt-get install -y wget vim htop git curl unzip
 
+#C++ dependency lib
+RUN sudo apt-get install liblapack-dev
+
 # Install OpenCV dependency lib
 RUN sudo apt-get install -y python-dev python-pip python-numpy build-essential cmake pkg-config libatlas-base-dev gfortran \
                             libjasper-dev libgtk2.0-dev libavcodec-dev libavformat-dev \
